@@ -9,16 +9,16 @@ const writeFileAsync = util.promisify(fs.writeFile);
 
 
 const app = express();
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 3025;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.use(express.static("./develop/public"));
 
-app.get("/api/notes", function(req,res) {
+app.get("/api/notes", function(req, res) {
     readFileAsync("./develop/db/db.json", "utf8").then(function(data) {
-        notes = [].contact(JSON.parse(data))
+        notes = [].concat(JSON.parse(data))
         res.json(notes);
     })
 });
@@ -27,7 +27,7 @@ app.get("/api/notes", function(req,res) {
 app.post("/api/notes", function(req, res) {
     const note = req.body;
     readFileAsync("./develop/db/db.json", "utf8").then(function(data) {
-        const notes = [].contact(JSON.parse(data));
+        const notes = [].concat(JSON.parse(data));
         note.id = notes.length + 1
         notes.push(note);
         return notes
@@ -37,7 +37,7 @@ app.post("/api/notes", function(req, res) {
     })
 }); 
 
-app.delete("api/note/:id", function(req, res)  {
+app.delete("api/notes/:id", function(req, res)  {
     const idToDelete = parseInt(req.params.id);
     fs.readFileAsync("./develop/db/db.json", "utf8").then(function(data)  {
         const notes = [].concat(JSON.parse(data));
@@ -58,16 +58,18 @@ app.delete("api/note/:id", function(req, res)  {
 app.get("/notes", function(req, res)  {
     res.sendFile(path.join(__dirname, "./develop/public/notes.html"));
 });
+
 app.get("/", function(req, res)  {
-    res.sendFile(path.join(__dirname, "./develop/public/notes.html"));
+  res.sendFile(path.join(__dirname, "./develop/public/index.html")); 
 });
+
 app.get("*", function(req, res)  {
-    res.sendFile(path.join(__dirname, "./develop/public/notes.html"));
+    res.sendFile(path.join(__dirname, "./develop/public/index.html"));
 });
 
 
 app.listen(PORT, function()  {
-    console.log("App listening on PORT " + PORT);
+    console.log("App listening on PORT" + PORT);
 });
 
 
