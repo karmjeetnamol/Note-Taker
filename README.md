@@ -4,13 +4,11 @@
 # Description
 
 This application can be used to write, save, and delete notes. This application use an express backend to save and retrieve note data from a JSON file.
- 
 
  ![Screenshot](/screenshot/screenshot.png)
-Format: ![Images to See](C:\Users\Karmjeet\code\Note-Taker\Screenshot\Screenshot.png);
+
 
  ![Screenshot](/screenshot/screenshot1.png)
-Format: ![Images to See](C:\Users\Karmjeet\code\Note-Taker\Screenshot\Screenshot1.png);
 
 
 
