@@ -5,9 +5,13 @@
 
 This application can be used to write, save, and delete notes. This application use an express backend to save and retrieve note data from a JSON file.
  
-    ![Screenshot](/assets/Screenshot 1.png)
-    Format:![Images to See](C:\Users\Karmjeet\code\Note-Taker\assets\Screenshot 1.png);
-  
+
+ ![Screenshot](/screenshot/screenshot.png)
+Format: ![Images to See](C:\Users\Karmjeet\code\Note-Taker\Screenshot\Screenshot.png);
+
+ ![Screenshot](/screenshot/screenshot1.png)
+Format: ![Images to See](C:\Users\Karmjeet\code\Note-Taker\Screenshot\Screenshot1.png);
+
 
 
 # User Story
@@ -22,13 +26,3 @@ For users that need to keep track of a lot of information, it's easy to forget o
 
 # Repository
   * Heroku link: https://note-taker-kn.herokuapp.com/
-
-
-  
-
-
-  ![Screenshot](/screenshot/screenshot.png)
-Format: ![Images to See](C:\Users\Karmjeet\code\README-Generate\screenshot\screenshot.png);
-
-[![Video](https://i9.ytimg.com/vi/DMFJ6m3-hGo/mq2.jpg?sqp=CMTo0Y8G&rs=AOn4CLBaXl_L5YYKtu-fdubNja6Hu7vsMA)](https://youtu.be/DMFJ6m3-hGo);
-
